@@ -60,8 +60,8 @@ int main(int argc, char *argv[])
             char fullFilePath[1024];
             if (searchInPath(fullFilePath, pathDirectories, command, pathDirectoryCount))
             {
-                printf("command %s is found in %s\n", command, fullFilePath);
-                /*
+                // printf("command %s is found in %s\n", command, fullFilePath);
+
                 char fullCommand[1024] = "";
                 strncpy(fullCommand, command, 1024);
                 for (int i = 0; i < argumentCount; i++)
@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
                     sprintf(fullCommand, "%s %s", fullCommand, arguments[i]);
                 }
                 system(fullCommand);
-                */
             }
             else
             {
@@ -77,12 +76,14 @@ int main(int argc, char *argv[])
             }
         }
 
+        /*
         printf("command read: %s\n", command);
         printf("Argument count: %d\n", argumentCount);
         for (int i = 0; i < argumentCount; i++)
         {
             printf("Argument %d: %s\n", i + 1, arguments[i]);
         }
+        */
     }
 
     return 0;
